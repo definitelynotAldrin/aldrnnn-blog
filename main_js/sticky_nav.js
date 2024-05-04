@@ -9,7 +9,8 @@ window.addEventListener('scroll', function() {
     if (window.pageYOffset > firstHeaderHeight) {
         // Add a class to the second header to fix its position
         secondHeader.classList.add('fixed-header');
-    } else {
+    } 
+    else {
         // Remove the class if the user scrolls back up
         secondHeader.classList.remove('fixed-header');
     }
@@ -24,3 +25,22 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.toggle('show'); // Toggle the class directly on the ul element
     });
 });
+
+
+
+
+
+// ------------------------------image maximizer----------------------------
+document.querySelectorAll('.blog-image').forEach(function(image) {
+    image.addEventListener('click', function() {
+      if (!image.classList.contains('maximized')) {
+        image.classList.add('maximized');
+        image.style.width = '100%';
+        image.style.height = '100%';
+      } else {
+        image.classList.remove('maximized');
+        image.style.width = '100%';
+        // image.style.height = 'auto';
+      }
+    });
+  });

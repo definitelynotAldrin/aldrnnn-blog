@@ -17,6 +17,19 @@
     --poppins: 'poppins', sans-serif;
 }
 
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--blue);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--semi-dark);
+    cursor: pointer;
+  }
+
 #home-page{
     width: 100%;
     /* height: 100vh; */   
@@ -231,14 +244,6 @@
     .first-header-group1{
         font-size: 0.8rem;
     }
-    
-    .fixed-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999;
-    }
 
     .second-header{
         padding: 1rem 2rem;
@@ -293,6 +298,15 @@
         z-index: -2;
     }
     
+
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
 
 
     
@@ -526,6 +540,10 @@
     height: 100%;
 }
 
+.title-blog{
+    font-size: 1.5rem;
+    color: var(--black);
+}
 
 .blog-paragraph{
     font-size: 1.1rem;
@@ -539,9 +557,14 @@
     font-size: 1.2rem;
 }
 
+.image-container{
+    display: flex;
+    gap: 1rem;
+}
+
 .image-dota{
     width: 100%;
-    margin: 1rem 0;
+    cursor: pointer;
 }
 
 .second-blog-content .image-dota{
@@ -603,9 +626,13 @@
     width: 70%;
 }
 
+.comment-image-container{
+    width: 100px;
+    height: 100px;
+}
+
 .comment-image{
-    width: 15%;
-    height: 25%;
+   width: 100%;
     border-radius: 50%;
 }
 
@@ -1134,6 +1161,11 @@
         color: var(--black);
         height: 100%;
     }
+
+    .image-container{
+        flex-direction: column;
+    }
+    
     
     .game-tags{
         display: flex;
@@ -1162,9 +1194,16 @@
         width: 100%;
     }
     
-    .comment-image{
-        width: 10%;
+    .comment-image-container{
+        width: 100px;
+        height: 100px;
     }
+    
+    .comment-image{
+       width: 100%;
+        border-radius: 50%;
+    }
+    
     
     .comment-group{
         display: flex;
@@ -1424,9 +1463,14 @@
         width: 100%;
     }
     
+    .comment-image-container{
+        width: 40px;
+        height: 40px;
+    }
+    
     .comment-image{
-        width: 5%;
-        height: 15%;
+       width: 100%;
+        border-radius: 50%;
     }
     
     .comment-group{
@@ -1804,963 +1848,3 @@ footer{
     }
 }
 
-
-
-@media screen and (min-width: 1025px){
-    #home-page{
-        width: 100%;
-    }
-    
-    
-    
-    .header{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .first-header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--black);
-        padding: 0.7rem 7rem;
-        color: var(--white);
-    }
-    
-    .first-header-group1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    .first-header-group2{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    
-    .first-header-group2 a{
-        text-decoration: none;
-        color: var(--black);
-        height: 25px;
-        width: 25px;
-        background: var(--white);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.3s 100ms ease;
-    }
-    
-    .first-header-group2 a:hover{
-        transform: translateY(-5px);
-    }
-    
-    .second-header{
-        padding: 1rem 7rem;
-        background-color: var(--light-blue);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .navigation-bar ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 3rem;
-    }
-    
-    .navigation-bar ul li{
-        list-style: none;
-    }
-    
-    .navigation-bar ul li a{
-        font-size: 0.9rem;
-        font-weight: 500;
-        text-transform: capitalize;
-        text-decoration: none;
-        color: var(--white);
-        position: relative;
-    }
-    
-    .navigation-bar ul li a::before{
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -5px;
-        left: 0;
-        background-color: var(--black);
-        transition: all 0.3s ease-in-out;
-    }
-    
-    .navigation-bar ul li a:hover:before{
-        width: 100%;
-    
-    }
-    
-    .fixed-header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 999; /* Ensure it appears above other content */
-    }
-    
-    
-    .header-logo{
-        font-size: 1.5rem;
-        font-weight: 700;
-        text-transform: capitalize;
-        color: var(--white);
-        font-family: var(--pixel-sans);
-    }
-    
-    .fa-th-large{
-        font-size: 1.5rem;
-        color: var(--white);
-        text-shadow: -2px 2px 1px var(--black);
-    }
-    
-    #navbar{
-        display: none;
-        font-size: 1.3rem;
-        color: var(--white);
-    }
-    
-    .image-background{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        object-fit: cover;
-        z-index: -2;
-    }
-
-    .banner-overlay{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        object-fit: cover;
-        z-index: -2;
-        background-color: #1b5cbc;
-        mix-blend-mode: overlay;
-    }
-    
-    .main-content{
-        display: flex;
-        padding: 3rem 0;
-    }
-    
-    .hero{
-        color: var(--white);
-        padding: 9rem 7rem;
-        width: 80%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .small-title{
-        font-size: 0.9rem;
-    }
-    
-    .title{
-        font-size: 2.7rem;
-        text-transform: capitalize;
-    }
-    
-    .sub-title{
-        font-size: 1.3rem;
-        text-transform: capitalize;
-    }
-    
-    .description{
-        font-size: 0.67rem;
-    }
-    
-    .profile-container{
-        position: relative;
-        width: 100%;
-    }
-     
-    .circle{
-        position: absolute;
-        top: 15%;
-        left: 30%;
-        width: 350px;
-        height: 350px;
-        background-color: var(--black);
-        overflow: hidden;
-        border-radius: 50%;
-       
-    }
-    
-    .image-profile{
-        width: 100%;
-    }
-
-
-    #blog-page{
-        height: 100%;
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    
-    .blog-container{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .blog-image{
-        width: 100%;
-        height: 60vh;
-        object-fit: fill;
-        top: 0;
-        z-index: -1;
-        position: relative;
-    }
-    
-    .blog-overlay{
-        position: absolute;
-        width: 100%;
-        height: 60vh;
-        object-fit: fill;
-        top: 0;
-        z-index: 1;
-        background-color: #414040;
-        mix-blend-mode: overlay;
-    }
-    
-    .blog-title{
-        position: absolute;
-        left: 50%;
-        top: 35%;
-        transform: translate(-50%, -50%);
-        font-size: 6rem;
-        font-family: var(--pixel-sans);
-        color: var(--white);
-        text-shadow: -2px 2px 1px var(--black);
-    }
-
-    .blog-content{
-        padding: 3rem 7rem;
-        display: flex;
-        flex-direction: column;
-     }
-     
-     .blog-hero{
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         gap: 2rem;
-     }
-     .blog-hero-img{
-         width: 60%;
-         border-radius: 30px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-     }
-     
-     .hero-content{
-         width: 100%;
-         display: flex;
-         flex-direction: column;
-         gap: 1rem;
-     }
-     
-     .profile-img{
-         width: 10%;
-         border-radius:50%;
-     }
-     
-     .hero-content{
-         display: flex;
-         flex-direction: column;
-         gap: 1rem;
-     }
-     
-     .date{
-         font-size: 0.8rem;
-         color: var(--black);
-         text-transform: uppercase;
-     }
-     
-     .hero-title{
-         font-size: 2.5rem;
-         font-weight: 900;
-     }
-     
-     .hero-profile{
-         display: flex;
-         align-items: center;
-         gap: 0.5rem;
-     }
-     
-     .text-group{
-         display: flex;
-         flex-direction: column;
-         color: var(--black);
-     }
-     
-     .text-group .name{
-         font-size: 0.9rem;
-         text-transform: capitalize;
-         font-weight: 700;
-     }
-     
-     .text-group .titles{
-         font-size: 0.8rem;
-         font-weight: 700;
-         text-transform: capitalize;
-         color: var(--blue);
-     }
-     
-     .blog-main-content{
-         padding: 5rem 0;
-         width: 100%;
-         display: flex;
-         gap: 3rem;
-     }
-     
-     .first-blog-content{
-         padding: 2rem;
-         background-color: #eeeeee;
-         width: 60%;
-         display: flex;
-         flex-direction: column;
-         gap: 1.5rem;
-         color: var(--black);
-     }
-     
-     .second-blog-content{
-         padding: 2rem;
-         background-color: #eeeeee;
-         width: 40%;
-         display: flex;
-         flex-direction: column;
-         color: var(--black);
-         height: 100%;
-     }
-     
-     
-     .blog-paragraph{
-         font-size: 1.1rem;
-         font-family: var(--poppins);
-         text-align: justify;
-     }
-     
-     .blog-paragraph span{
-         font-family: var(--pixel-sans);
-         font-weight: 700;
-         font-size: 1.2rem;
-     }
-     
-     .image-dota, .video-container{
-         width: 100%;
-         margin: 1rem 0;
-     }
-     
-     .second-blog-content .image-dota{
-         width: 100%;
-     }
-     
-     
-     .blog-title-desc{
-         font-size: 2rem;
-         font-family: var(--pixel-sans);
-         color: var(--black);
-     }
-     
-     
-     
-     .dire-text, .radiant-text{
-         font-weight: 700;
-         font-family: var(--pixel-sans);
-         color: var(--black);
-     }
-     
-     .comment-section-container{
-         width: 100%;
-         display: flex;
-         flex-direction: column;
-         gap: 2rem;
-     }
-     
-     .game-tags{
-         margin-top: 2rem;
-         display: flex;
-         gap: 1rem;
-     }
-     
-     .game-tags span{
-         padding: 7px 12px;
-         font-size: 0.8rem;
-         text-transform:capitalize;
-         border-radius: 5px;
-         color: var(--white);
-         background-color: var(--blue);
-     }
-     
-     .comment-section{
-         width: 100%;
-         display: flex;
-         flex-direction: column;
-         gap: 2rem;
-     }
-     
-     
-     .comments-title{
-         text-transform: capitalize;
-     }
-     
-     .card-section{
-         display: flex;
-         gap: 1rem;
-         width: 70%;
-     }
-     
-     .comment-image{
-        width: 10%;
-        height: 30%;
-        border-radius: 50%;
-    }
-     
-     .comment-group{
-         display: flex;
-         flex-direction: column;
-         gap: 0.8rem;
-     }
-     
-     .comment-name{
-         font-size: 1rem;
-         font-weight: 700;
-         color: var(--black);
-         text-transform: capitalize;
-         font-family: var(--poppins);
-         letter-spacing: 0.5px;
-     }
-     
-     .comment-date{
-         font-size: 0.7rem;
-         font-weight: 500;
-         color: var(--blue);
-         text-transform: uppercase;
-         font-family: var(--poppins);
-         letter-spacing: 0.5px;
-     }
-     
-     .comment-description{
-         font-size: 0.9rem;
-         font-weight: 500;
-         color: var(--black);
-         text-align: justify;
-         font-family: var(--poppins);
-         letter-spacing: 0.5px;
-     }
-     
-     .comment-button{
-         text-decoration: none;
-         text-transform: capitalize;
-         padding: 5px 10px;
-         background: var(--black);
-         width: 15%;
-         font-size: 0.7rem;
-         font-weight: 400;
-         color: var(--white);
-         text-align: center;
-         font-family: var(--poppins);
-         letter-spacing: 0.5px;
-         border-radius: 3px;
-     }
-     
-     .nested{
-         margin-left: 3.5rem;
-     }
-     
-     .post-section-container{
-         margin-top: 1rem;
-         display: flex;
-         flex-direction: column;
-         gap: 1rem;
-         background-color: #fff;
-         padding: 2rem 1rem;
-     }
-     
-     .post-title{
-         text-transform: capitalize;
-         color: var(--black);
-     }
-     
-     .post-group-container{
-         display: flex;
-         flex-direction: column;
-         gap: 1rem;
-     }
-     
-     .post-group{
-         width: 100%;
-         display: flex;
-         gap: 1rem;
-     }
-     
-     .post-group input, textarea{
-         padding: 0.6rem 2rem 0.6rem 0.6rem;
-         width: 100%;
-         border: 1px solid  rgba(0, 0, 0, 0.1);
-         background-color: #eeeeee;
-     }
-     
-     .post-button{
-         text-decoration: none;
-         text-transform: capitalize;
-         font-size: 0.8rem;
-         color: var(--white);
-         background-color: var(--blue);
-         padding: 7px 15px;
-         border-radius: 3px;
-         width: 15%;
-         text-align: center;
-         transition: 0.2s ease 100ms;
-     }
-     
-     .post-button:hover{
-         background-color: var(--black);
-     }
-     
-     .other-title{
-         width: 100%;
-         padding: 8px 15px;
-         font-size: 1.1rem;
-         text-transform: capitalize;
-         background-color: var(--black);
-         color: var(--white);
-     }
-     
-     .experience{
-         overflow: hidden;
-         border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-         padding:2rem 0;
-         display: flex;
-         flex-direction: column;
-         gap: 1.5rem;
-     }
-     .side-image{
-         width: 100%;
-         transition: 0.2s ease-out   ;
-     }
-     
-     .side-image:hover{
-         transform: scale(1.03);
-     }
-     
-     .exp-text-group{
-         display: flex;
-         flex-direction: column;
-         gap: 1.5rem;
-     }
-     
-     .link-exp{
-         text-decoration: none;
-         font-size: 1.4rem;
-         font-weight: 700;
-         color: var(--black);
-         transition: 0.2s;
-     }
-     
-     .link-exp:hover{
-         color: var(--light-blue);
-     }
-     
-     .exp-info{
-         display: flex;
-         gap: 1rem;
-         color: var(--semi-dark);
-         opacity: 0.7;
-     }
-     
-     .exp-info-group{
-         display: flex;
-         align-items: center;    
-         justify-content: center;
-         gap: 0.5rem;
-     }
-     
-     .exp-info-group span, i{
-         font-size: 0.8rem;
-         text-transform: capitalize;
-     }
-     
-     .exp-description{
-         font-size: 0.9rem;
-         text-align: justify;
-         letter-spacing: 0.5px;
-         font-family: var(--poppins);
-         color: var(--semi-dark);
-     }
-     
-     
-     .dota-information{
-         display: flex;
-         flex-direction: column;
-         gap: 1.5rem;
-         margin-top: 2rem;
-     }
-     
-     
-     .dota-group{
-         display: flex;
-         align-items: center;
-         gap: 1rem;
-     }
-     
-     .dotes-img{
-         width: 40%;
-     }
-     
-     .dota-group-text{
-         display: flex;
-         flex-direction: column;
-         gap: 0.3rem;
-     }
-     
-     .dota-info-groups{
-         display: flex;
-         gap: 1rem;
-     }
-     
-     .dota-info-group{
-         display: flex;
-         gap: 0.7rem;
-     }
-     
-     .dota-info-title{
-         text-decoration: none;
-         font-weight: 700;
-         color: var(--black);
-         transition: 0.2s ease;
-     }
-     
-     .dota-info-title:hover{
-         color: var(--light-blue);
-     }
-     
-     .dota-group span, i{
-         font-size: 0.7rem;
-     }
-     
-     .image-banner{
-         margin: 2rem 0;
-         width: 100%;
-     }
-     
-     .dota-card-container{
-         display: flex;
-         flex-direction: column;
-         margin-bottom: 1rem;
-     }
-     
-     .dota-card{
-         padding: 30px 0;
-         height: 40vh;
-         overflow: hidden;
-         position: relative;
-         text-decoration: none;
-     }
-     
-     .dota-card-img{
-         width: 100%;
-         position: relative;
-         /* filter: grayscale(100%); */
-         transition: 0.2s 100ms;
-         /* border-bottom: 5px solid var(--light-blue); */
-     }
-     
-     .gradient{
-         position: absolute;
-         width: 100%;
-         height: 85%;
-         top:10%;
-         background: linear-gradient(rgba(0,0,0,0.5), var(--black));
-         opacity: 0.7;
-         transition: 0.5s 100ms;
-         cursor: pointer;
-         filter: blur(5px);
-     }
-     
-     
-     .dota-card-text{
-         padding: 0 1rem;
-         position: absolute;
-         top: 65%;
-         color: var(--white);
-         z-index: 1;
-         transition: 0.3s 100ms ease;
-     }
-     
-     .card-date{
-         font-size: 1rem;
-         text-transform: capitalize;
-         text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.9);
-     }
-     
-     .card-title{
-         font-size: 1.5rem;
-         text-transform: capitalize;
-         text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.9);
-         text-align: justify;
-     }
-     
-     .card-description{
-         text-align: justify;
-         padding: 0 1rem;
-         color: var(--white);
-         position: absolute;
-         font-size: 0.9rem;
-         font-weight: 300;
-         top:100%;
-         transition: 0.3s 100ms ease;
-     }
-     
-     .update-2{
-         top: 75%;
-     }
-     
-     .card-link:hover .dota-card-text{
-         top: 30%;
-     }
-     
-     .card-link:hover .card-description{
-         top: 60%;
-     }
-     
-     .card-link:hover .update-2{
-         top: 45%;
-     }
-     
-     .card-link:hover .desc-2{
-         top: 65%;
-     }
-     
-     .card-link:hover .gradient{
-         opacity: 1;
-         filter: blur(0);
-         
-     }
-     
-     
-     .dota-socials{
-         margin: 1rem 0;
-         display: flex;
-         flex-direction: column;
-         gap: 1rem;
-     }
-     
-     
-     .social-group a{
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         padding: 8px 10px;
-         color: var(--white);
-         text-decoration: none;
-         transition: 0.3s ease 100ms;
-         filter: grayscale(100%);
-     }
-     
-     .social-group .fb{
-         background-color: #4267B2;
-     }
-     
-     .social-group .twt{
-         background-color: #1DA1F2;
-     }
-     
-     .social-group .ig{
-         background: linear-gradient(to right, #4267B2, #E1306C, #FCAF45);
-     }
-     
-     .social-group:hover .fb,
-     .social-group:hover .ig, 
-     .social-group:hover .twt{
-         filter: grayscale(0);
-     }
-     
-     .social-group i{
-         font-size: 1rem;
-         color: var(--white);
-         width: 35px;
-         height: 35px;
-         background-color: rgba(244, 242, 242, 0.2);
-         display: flex;  
-         justify-content: center;
-         align-items: center;
-     }
-     
-     .social-group span{
-         font-size: 0.8rem;
-         text-transform: capitalize;
-     }
-
-     footer{
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .footer-container{
-        width: 100%;
-        padding: 5rem 7rem;
-        background-color: var(--black);
-        border-top: 3px solid var(--blue);
-    }
-    
-    
-    .footer-content{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        align-self: normal;
-        gap: 5rem;
-        font-family: var(--poppins);
-    }
-    
-    .footer-group{
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-bottom: auto;
-    }
-    
-    .foot-group{
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 50%;
-        color: var(--white);
-    }
-    
-    .foot-group h3{
-        font-size: 0.8rem;
-        font-weight: 500;
-    }
-    
-    
-    .foot-group i{
-        color: var(--light-blue);
-        margin-right: 10px;
-    }
-    
-    .footer-title{
-        color: var(--light-blue);
-        text-transform: uppercase;
-        font-weight: 600;
-    }
-    
-    .logo-name{
-        text-transform: capitalize;
-        font-weight: 700;
-        font-size:1.5rem;
-    }
-    
-    
-    .footer-nav ul{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-    
-    .footer-nav ul li{
-        list-style: none;
-    }
-    
-    .footer-nav ul li a{
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        font-weight: 500;
-        font-family: var(--poppins);
-        color: var(--white);
-        letter-spacing: 0.5px;
-        position: relative;
-        transition: 0.2s ease 100ms;
-        width: 100%;
-    }
-    
-    .footer-nav ul li a:hover{
-        color: var(--light-blue);
-    }
-    
-    .footer-nav i{
-        color: var(--light-blue);
-        margin-right: 10px;
-    }
-    
-    .second-footer-container{
-        width: 100%;
-        padding: 1rem 5rem;
-        background-color: var(--semi-dark);
-    }
-    
-    .second-footer-content{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2rem;
-        font-family: var(--poppins);
-    }
-    
-    .footer-links{
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .footer-mop{
-        display: flex;
-        gap: 1rem;
-    }
-    
-    .footer-mop a{
-        text-decoration: none;
-    }
-    
-    .footer-mop i{
-        font-size: 1rem;
-        transition: 0.3s ease 100ms;
-        color: var(--blue);
-        width: 35px;
-        height: 35px;
-        background-color: var(--black);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .footer-mop i:hover{
-        color: var(--light-blue);
-    }
-    
-    .footer-footer{
-        font-size: 0.7rem;
-        font-weight: 400;
-        color: var(--white);
-    }
-    
-    .footer-footer span{
-        font-family: monospace;
-        color: var(--light-blue);
-        text-transform: capitalize;
-    }
-}
